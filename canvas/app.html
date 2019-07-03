@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id"
+    content="339781808598-463uom8g0h0jb1p69g8hs2vs70i5ar4o.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <title>Piskel Clone by Feodorius</title>
+</head>
+<!-- 339781808598-463uom8g0h0jb1p69g8hs2vs70i5ar4o -->
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1><a class="h1" href="../index.html">Piskel Clone</a></h1>
+      <button class="sign_in_button" id="sign_in_button">Sign In</button>
+      <div class="google_profile"><img alt="google photo" class="google_photo"><p class="google_name"></p></div>
+      </script>
+    </header>
+    <main>
+      <section class="tool_section">
+        <div class="tool_button pen active_tool_button" title="Pen Tool"></div>
+        <div class="tool_button mirror" title="Vertical mirror pen"></div>
+        <div class="tool_button paint_bucket" title="Paint bucket tool"></div>
+        <div class="tool_button same_color" title="Paint all pixels of the same color"></div>
+        <div class="tool_button eraser" title="Eraser tool"></div>
+        <div class="tool_button stroke" title="Stroke tool"></div>
+        <div class="tool_button rectangle" title="Rectangle tool"></div>
+        <div class="tool_button circle" title="Circle tool"></div>
+        <div class="tool_button dithering" title="Dithering tool"></div>
+        <div class="tool_button lighten" title="Lighten"></div>
+        <div class="tool_button move" title="Move tool"></div>
+        <div class="tool_button color_picker" title="Color picker">️</div>
+        <div class="colors">
+          <input class="color_selection fist_color_button" type="color" id="fist_color_button"
+            title="Primary - left mouse button">
+          <input class="color_selection secondary_color_button" type="color" id="secondary_color_button"
+            title="Secondary - right mouse button">
+          <div class="change_arrow"></div>
+        </div>
+      </section>
+      <section class="frame_section">
+        <div class="frames_array" id="frames_array">
+        </div>
+        <button class="add_new_frame" id="add_new_frame">Add New Frame</button>
+      </section>
+      <section class="canvas_section">
+
+        <canvas class="canvas" id="canvas" width="32" height="32"></canvas>
+        <canvas class="canvas canvas_top" id="canvas_top" width="32" height="32"></canvas>
+      </section>
+      <section class="preview_section">
+        <div class="animation_player">
+          <canvas height="32" width="32" class="preview_canvas" id="preview_canvas"></canvas>
+        </div>
+        <div class="fps_range_block">
+          <input class="fps_range" type="range" name="fps" value="1" min="0" max="24" step="1" id="fps_range">
+          <p class="range_value">1 fps</p>
+        </div>
+        <button class="fullscreen_button" id="fullscreen_button">Fullscreen</button>
+
+        <div class="layer_tools">
+          <div class="tool_button sheep" title="Clone current layer to all frames"></div>
+          <div class="tool_button inversion" title="Color inversion">️</div>
+          <div class="tool_button rotate" title="Rotate">️</div>
+          <div class="tool_button vertical_flip" title="Flip verticaly">️</div>
+        </div>
+        <form class="radio_form" id="change_size">
+          <p class="change_size_p">Canvas size:</p>
+          <label class="change_size active_size"><input type="radio" name="change_size" id="change_size_32" value="32"
+              checked>32:32</label>
+          <label class="change_size"><input type="radio" name="change_size" id="change_size_64" value="64">64:64</label>
+          <label class="change_size"><input type="radio" name="change_size" id="change_size_128"
+              value="128">128:128</label>
+        </form>
+        <div id="cursor_position" class="cursor_position">[0:0]</div>
+
+        <button id="show" class="show_export_dialog_button">Export</button>
+        <dialog id="export_dialog" class="export_dialog">
+          <div class="export_dialog_div">
+            <div id="close_export_dialog" class="close_export_dialog">X</div>
+            <label class="label">Export Size:<input type="number" name="gifSize" id="gifSize" class="gifSize" max="1024"
+                min="32" value="256"></label>
+            <label class="label">Export FPS:<input type="number" name="gif_fps" id="gif_fps" class="gif_fps" min="1"
+                max="24" value="1"></label>
+            <label class="label">Export Background:
+              <input type="color" name="gifColor" id="gifColor" class="gifColor"></label>
+
+            <button class="export_gif" id="export_gif">Export</button>
+            <button class="export_gif" id="export_apng">Export apng</button>
+          </div>
+        </dialog>
+      </section>
+    </main>
+  </div>
+  <script type="text/javascript" src="../app.bundle.js"></script>
+</body>
