@@ -110,6 +110,7 @@ main {
 }
 
 .canvas_section {
+  overflow: auto;
   position: relative;
   background: grey;
   display: flex;
@@ -391,7 +392,6 @@ input[type=radio] {
   font-weight: bold;
   height: 20px;
   width: 90%;
-  margin: 10px auto;
   margin: 10px 0;
 }
 
@@ -618,4 +618,19 @@ input[type=radio] {
 
 input[type="color"i] {
   padding: 0;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 6 px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2 px;
+  background-color: #999;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(50, 50, 50, 0.4);
 }

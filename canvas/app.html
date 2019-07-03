@@ -8,7 +8,7 @@
   <meta name="google-signin-scope" content="profile email">
   <meta name="google-signin-client_id"
     content="339781808598-463uom8g0h0jb1p69g8hs2vs70i5ar4o.apps.googleusercontent.com">
-  <script src="https://apis.google.com/js/platform.js" async></script>
+  <script src="https://apis.google.com/js/platform.js" defer></script>
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <title>Piskel Clone by Feodorius</title>
@@ -92,12 +92,13 @@
             <label class="label">Export Background:
               <input type="color" name="gifColor" id="gifColor" class="gifColor"></label>
 
-            <button class="export_gif" id="export_gif">Export</button>
-            <button class="export_gif" id="export_apng">Export apng</button>
+            <button class="export_gif" id="export_gif">Export GIF</button>
+            <button class="export_gif" id="export_apng">Export APNG</button>
           </div>
         </dialog>
       </section>
     </main>
   </div>
+  <script src="https://apis.google.com/js/platform.js"></script>
   <script type="text/javascript" src="../app.bundle.js"></script>
 </body>
